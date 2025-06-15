@@ -9,3 +9,9 @@
 ```bash
 helm repo add sonarqube-helm https://yelnar0112.github.io/sonarqube-helm/
 helm repo update
+
+# Обновляем зависимости
+helm dependency update
+
+# Устанавливаем чарт
+helm install my-sonarqube .
