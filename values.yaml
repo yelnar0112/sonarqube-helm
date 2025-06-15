@@ -1,0 +1,21 @@
+sonarqube:
+  image:
+    repository: sonarqube
+    tag: community
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 9000
+  ingress:
+    enabled: false
+  resources: {}
+
+postgresql:
+  enabled: true
+  auth:
+    username: sonar
+    password: sonarpass
+    database: sonarqube
+  primary:
+    persistence:
+      enabled: false
